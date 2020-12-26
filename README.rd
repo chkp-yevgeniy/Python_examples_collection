@@ -4,7 +4,7 @@ This project contains a collection of Python working examples from very basic to
 
 These examples were tested and used in different projects and trainigs. 
 
-
+Basic scripts:  
 1_variable_types.py
 2_manupulate_strings.py
 3_condition.py
@@ -13,6 +13,7 @@ These examples were tested and used in different projects and trainigs.
 6_errorsHandling.py
 7_functions.py
 
+Advanced scripts: 
 chkp_web_api_login.py
 chkp_web_api_publish_logout.py
 csv_dictReader.py

@@ -32,6 +32,7 @@ The scrips are split in following folders:
 - json_processing_TBD.py
 - yaml_processing_TBD.py
 
+
 ## 3. Check Point WEB API calls:   
 - chkp_web_api_login.py  
 - chkp_web_api_add_host.py   
@@ -39,7 +40,12 @@ The scrips are split in following folders:
 - chkp_web_api_multiple_calls.py   
 
 
-# Python great documentation resource
+## 4. Run remote commands:  
+A tool to run multiple commands on multiple targets. 
+Check out the tool's Readme in the tool's folder.
+
+
+# Python great documentation resources
 Don't hesitate to use following awesome Python documentation resource.
 https://www.w3schools.com/python/
 https://docs.python.org/3/

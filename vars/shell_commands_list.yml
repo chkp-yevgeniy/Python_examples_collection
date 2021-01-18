@@ -1,0 +1,27 @@
+---
+shellCommands:
+  - { "action": "cmd", "name": "ls -al", "command": "ls -al" }
+  - { "action": "cmd", "name": "Disc space check: df -h ", "command": "df -h" }
+  #- {'action': 'cmd', 'name': 'Set ALL_AUS_GRP', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; echo "ALL_AUS_GRP=1 ; export ALL_AUS_GRP" >> $CPDIR/tmp/.CPprofile.sh','validationValue': ''}
+  #- {'action': 'cmd', 'name': 'Get snmp config', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; clish -c "set snmp agent-version any"'}
+# - {'action': 'cmd', 'name': 'Get snmp config', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; clish -c "set snmp community public read-only"'}
+# - {'action': 'cmd', 'name': 'Get snmp config', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; clish -c "set snmp agent-version v3-Only"'}
+# - {'action': 'cmd', 'name': 'Get snmp config', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; clish -c "set snmp contact firewall-team@allianz.de"'}
+# - {'action': 'cmd', 'name': 'Get snmp config', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; clish -c "show configuration snmp" | sed "s/\"//g"','validationValue': 'snmp_config'}
+#- {'action': 'cmd', 'name': 'CPU utilization: mpstat', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; mpstat'}
+# - {'action': 'cmd', 'name': 'Memory utilization: free -m', 'command': 'free -m'}
+# - {'action': 'cmd', 'name': 'Intefaces stats, netstat -i', 'command': 'netstat -i'}
+# - {'action': 'cmd', 'name': 'cpinfo -y all', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; cpinfo -y all'}
+# - {'action': 'cmd', 'name': 'CoreXL, cpmq get', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; cpmq get'}
+# - {'action': 'cmd', 'name': 'vpn tu mstats', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; vpn tu mstats'}
+# - {'action': 'cmd', 'name': 'fw ctl pstat', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; fw ctl pstat'}
+# - {'action': 'cmd', 'name': 'cpstat vpn -f all', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; cpstat vpn -f all'}
+# - {'action': 'cmd', 'name': 'fwaccel stats', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; fwaccel stats'}
+# - {'action': 'cmd', 'name': 'arp cache size', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; clish -c "show arp table cache-size"'}
+# - {'action': 'cmd', 'name': 'ClusterXL cphaprob stat', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; cphaprob stat'}
+# - {'action': 'cmd', 'name': 'ClusterXL cphaprob -a if', 'command': '. /opt/CPshared/5.0/tmp/.CPprofile.sh; cphaprob -a if'}
+# - {'action': 'copyFile', 'name': '$FWDIR/conf/trac_client_1.ttm', 'command': '', 'fileName': '/opt/CPsuite-R80/fw1/conf/trac_client_1.ttm'}
+# - {'action': 'copyFile', 'name': '$FWDIR/conf/local.scv', 'command': '', 'fileName': '/opt/CPsuite-R80/fw1/conf/local.scv'}
+# For R80.30
+#- {'action': 'copyFile', 'name': '$FWDIR/conf/trac_client_1.ttm', 'command': '', 'fileName': '/opt/CPsuite-R80.30/fw1/conf/trac_client_1.ttm'}
+#- {'action': 'copyFile', 'name': '$FWDIR/conf/local.scv', 'command': '', 'fileName': '/opt/CPsuite-R80.30/fw1/conf/local.scv'}

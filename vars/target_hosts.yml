@@ -1,0 +1,11 @@
+---
+gateways:
+  - {
+      "gw_name": mds8040,
+      "gw_ipaddr": "192.168.168.100",
+      "eth0_mask_length": "25",
+      "eth0_netmask": "255.255.255.128",
+      "location": "lab",
+      "mgmt": "mgmtR8040",
+      "gw_domain": "mds",
+    }

@@ -8,7 +8,8 @@ The source code is structured and commented for better understanding.
 
 The scrips are split in following folders:
 
-1. Basic scripts:
+
+## 1. Basic scripts:
 - 1_variable_types.py  
 - 2_manupulate_strings.py  
 - 3_condition.py  
@@ -17,7 +18,8 @@ The scrips are split in following folders:
 - 6_errorsHandling.py  
 - 7_functions.py  
 
-2. Advanced scripts:   
+
+## 2. Advanced scripts:   
 - csv_dictReader.py  
 - csv_processing.py  
 - dicts_of_dicts.py  
@@ -26,16 +28,15 @@ The scrips are split in following folders:
 - list_of_lists.py  
 - my_class.py  
 - regex.py  
-# To be done: 
+\# To be done: 
 - json_processing_TBD.py
 - yaml_processing_TBD.py
 
-CHKP web api calls:   
+## 3. Check Point WEB API calls:   
 - chkp_web_api_login.py  
 - chkp_web_api_add_host.py   
 - chkp_web_api_publish_logout.py
 - chkp_web_api_multiple_calls.py   
-
 
 
 # Python great documentation resource

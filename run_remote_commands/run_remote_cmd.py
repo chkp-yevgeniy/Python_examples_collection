@@ -68,7 +68,7 @@ def getLogger(_log_file):
   return logger
 
 
-def runCmdsOnTarget(_target_dict, _cmds_list):
+def runCmdsOnTarget(_target_dict, _cmds_list, user, pwd):
   result_dict=collections.OrderedDict()
   cmd_result_list=[]
   result_dict["gw_name"]=_target_dict["gw_name"]
@@ -83,10 +83,7 @@ def runCmdsOnTarget(_target_dict, _cmds_list):
   cmds_failed=0
 
   
-  user="admin"
-  # FIXME: user public key authentication instead of pwd
-  # If using pwd, it has to be saved in a secure manner
-  pwd="qwe123"
+  
   lg.debug("target_dict"+str(_target_dict))  
   target_ip=_target_dict["gw_ipaddr"]
   target_name=_target_dict["gw_name"]
@@ -179,6 +176,12 @@ def writeReports(_rslt_dict, _report_files):
 def main():
 
   global lg  
+
+  user="admin"
+  # FIXME: user public key authentication instead of pwd
+  # If using pwd, it has to be saved in a secure manner
+  pwd="qwe123"
+
   _log_file=project_abs_path+"remote_cmds.log"
   lg=getLogger(_log_file)
   lg.info("### ### ### Start tool to run remote commands ### ### ###")  
@@ -253,7 +256,7 @@ def main():
   rslt_list=[]
   if cmds_list and targets_list: 
     for target in targets_list:       
-      rslt_dict=runCmdsOnTarget(target, cmds_list)
+      rslt_dict=runCmdsOnTarget(target, cmds_list, user, pwd)
 
       #pprint.pprint(rslt_dict)
       writeReports(rslt_dict, report_files)

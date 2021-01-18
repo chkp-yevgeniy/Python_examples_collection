@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import sys, os
 
@@ -9,7 +9,7 @@ import re
 
 txt = "The firewalls are for the protection"
 
-# Check if string matches a regex expression
+print("Check if string matches a regex expression")
 regexExpr="^The.*fire.*$"
 rslt = re.search(regexExpr, txt)
 if rslt: 
@@ -21,7 +21,7 @@ print(rslt)
 
 #exit()
 
-# Get a substring from string
+print("\nGet a substring from string")
 rslt = re.search('The(.*)are', txt)
 if rslt:
     found = rslt.group(1)
@@ -30,18 +30,18 @@ print(found)
 
 #exit()
 
-# Get all matches into a list
+print("\nGet all matches into a list")
 rslt2 = re.findall("[Tt]he", txt)
 print(rslt2)
 
 # exit()
 
-# Split a string into list
+print("\nSplit a string into list")
 rslt3 = re.split("\s", txt)
 print(rslt3)
 
 #exit()
 
-# Replace
+print("\nReplace")
 rslt4 = re.sub("[Tt]he", "", txt)
 print(rslt4)

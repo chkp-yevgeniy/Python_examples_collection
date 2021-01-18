@@ -11,12 +11,11 @@ import time
 ## This tool sends publish and logout to mgmt server
 
 ## Make sure following parameters are conifigured as env vars:
-# export CHECKPOINT_SERVER=10.211.55.10
-# export CHECKPOINT_USERNAME=automation_user
+# export CHECKPOINT_SERVER=192.168.168.100
+# export CHECKPOINT_USERNAME=admin2
 # export CHECKPOINT_PASSWORD=qwe123
-# export CHECKPOINT_PORT=433
-# export CHECKPOINT_DOMAIN="CMA2"
-
+# export CHECKPOINT_PORT=443
+# export CHECKPOINT_DOMAIN="CMA1"
 
 
 def sendHttpsPost(_ip, _port, _url, _headers, _body):  
@@ -49,40 +48,27 @@ def main():
   print("sid: "+sid)
 
 
-  print("--- 3. Prepare header and body for CHKP web api call")
+  hostname="host_2"
+  ip_address="10.1.1.2"
+  
+  print("--- 3. Prepare header and body for CHKP web api call: add_host")
   headers = {'Content-type': 'application/json', 'X-chkp-sid': sid}  
-  body = {}
+  body = {"name": hostname, "ip-address": ip_address}
   body_json = json.dumps(body)  
 
 
-  print("--- 4. Execute publish")
-  url="/web_api/publish"  
+  print("--- 4. Execute add-host")
+  url="/web_api/add-host"  
   response=sendHttpsPost(env_d["CHECKPOINT_SERVER"], env_d["CHECKPOINT_PORT"], url, headers, body_json)
   response_d=json.loads(response)
   print("Response:")
   print(response_d)
-  if "task-id" in response_d:
-    print("Publish successful")
+  if "errors" in response_d:
+    print("ERROR: WEB API call failed")
   else: 
-    print("ERROR: Publish failed")            
+    print("WEB API call successful")
 
-  time.sleep(2)
 
-  print("--- 5. Execute logout")
-  url="/web_api/logout"  
-  response=sendHttpsPost(env_d["CHECKPOINT_SERVER"], env_d["CHECKPOINT_PORT"], url, headers, body_json)
-  response_d=json.loads(response)
-  print("Response:")
-  print(response_d)  
-  if "message" in response_d:
-    print(response_d["message"])
-    if response_d["message"]=="OK":
-      print("Logout successful")
-    else: 
-      print("ERROR: Logout failed")    
-      exit(1)
-  #print("Successfully finished")
-  
 
 if __name__ == "__main__":
     # execute only if run as a script

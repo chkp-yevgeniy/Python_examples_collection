@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import sys, os
 
@@ -23,8 +23,6 @@ class Firewall:
     # Private method
     def __print_ip(self):
       print("Firewall IP:"+self.ip)   
-
-
 
 
 ### Start MAIN here

@@ -47,7 +47,7 @@ Check out the tool's Readme in the tool's folder.
 
 # Python great documentation resources
 Don't hesitate to use following awesome Python documentation resources:  
-https://www.w3schools.com/python/
+https://www.w3schools.com/python/  
 https://docs.python.org/3/
 
 
